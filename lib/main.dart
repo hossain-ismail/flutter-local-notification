@@ -57,8 +57,10 @@ class _MyHomePageState extends State<MyHomePage> {
       tz.setLocalLocation(tz.getLocation('Asia/Dhaka'));
     }
 
-    const androidInitialize = AndroidInitializationSettings(
+   /* const androidInitialize = AndroidInitializationSettings(
       '@mipmap/launcher_icon',
+    ); */ const androidInitialize = AndroidInitializationSettings(
+      'ic_notification',
     );
 
     const iosSettings = DarwinInitializationSettings();
@@ -87,6 +89,7 @@ class _MyHomePageState extends State<MyHomePage> {
           channelDescription: 'Instant notification channel',
           importance: Importance.max,
           priority: Priority.high,
+          icon: 'ic_notification'
         ),
         iOS: DarwinNotificationDetails(),
       ),
@@ -115,6 +118,7 @@ class _MyHomePageState extends State<MyHomePage> {
           channelDescription: 'Reminder to complete daily habits',
           importance: Importance.max,
           priority: Priority.high,
+          icon: 'ic_notification'
         ),
         iOS: DarwinNotificationDetails(),
       ),
